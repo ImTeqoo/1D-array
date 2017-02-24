@@ -27,14 +27,15 @@ console.log(cars());
 * Return 	An order as a complete sentence represented as a string
 */
 function order(food, drink, dessert){
+	console.log(food + " " + drink + " " + dessert);
 	//Store the parameters in an array called "order"
-
+	var order = [food , drink , dessert];
 	//Print the array named "order"
-	
+	console.log(order);
 	//Print the length of the array named "order"
 
 	//Return the order as a complete sentence represented as a string
-	return;
+	return"I would like a " + food + " " + drink + " " + dessert + ".";
 }
 
 console.log(order("Burger", "root beer", "frosty"));
@@ -57,9 +58,14 @@ var currentClasses = [
 */
 function loopToChange(classes){
 	//Print the parameter that is being passed through the function
-
+	console.log(classes);
 	//Use a For loop to iterate through each value in the passed array
-	
+	for (var i = 0; i < classes.length; i++){
+		console.log(classes[i]);
+		if (classes[i] === "Band"){
+			classes[i] + "Computer Science";
+		}
+	}
 	//Return classes
 	return;
 }
@@ -91,15 +97,28 @@ console.log(arrayMethodToLoop([5 + 1, 3]));
 */
 function moreArrayMethods(priorities){
 	//Print the parameter that is being passed through the function
-
+	console.log(priorities);
 	//Use the method sort() to sort your priorities
+	priorities.sort();
 
+	console.log(priorties);
 	//Use the method indexOf() to replace "Not Going to Class" to "Going to Class"
-
 	//Use the method pop() to remove the item at the end of the array
+	var indexNumber = priorities.indesxof("Not going to class");
 
+	console.log(indexNumber);
+
+	priorities[indexNumber] + " Going to class ";
+
+	console.log(priorities);
 	//Use the method push() to add a priority that is important to the success of this class and don't forget to sort() them afterwards!
 
+priorities.pop();
+
+console.log(priorities);
+
+priorities.push("kitkat");
+priorities.sort();
 	//Return the changed array
 	return;
 }
